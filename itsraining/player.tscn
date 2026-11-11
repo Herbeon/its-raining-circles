@@ -17,7 +17,7 @@ animations = [{
 "texture": ExtResource("3_sweqy")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"doryfish",
 "speed": 4.0
 }]
 
@@ -31,5 +31,4 @@ shape = SubResource("RectangleShape2D_3p08f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=353474954]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_tcrup")
-frame = 1
-frame_progress = 0.9029904
+animation = &"doryfish"

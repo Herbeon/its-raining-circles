@@ -13,7 +13,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _ready():
-	animated_sprite.play("default")
+	animated_sprite.play(power)
 	add_to_group("players")
 
 func _physics_process(delta: float) -> void:
@@ -31,6 +31,10 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis(left_action, right_action)
 	if direction:
+		if direction >= 0:
+			animated_sprite.flip_h = false
+		else:
+			animated_sprite.flip_h = true
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
