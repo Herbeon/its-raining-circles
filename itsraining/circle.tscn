@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c8njo47llevcc"]
 
 [ext_resource type="Texture2D" uid="uid://rh308ykd3ojg" path="res://circles/a circle yay.png" id="1_ot13w"]
+[ext_resource type="Script" uid="uid://cmeun8p24sa7j" path="res://circle.gd" id="1_whlr7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcrup"]
 radius = 42.190044
 
 [node name="circle" type="CharacterBody2D" unique_id=1829548023]
+script = ExtResource("1_whlr7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981893721]
 shape = SubResource("CircleShape2D_tcrup")

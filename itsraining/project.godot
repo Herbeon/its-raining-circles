@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="itsraining"
+run/main_scene="uid://cg1o63scwtctp"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -115,6 +116,7 @@ p4_right={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=2000.0
 
 [rendering]
 
