@@ -5,6 +5,7 @@ signal hit_someone
 
 @export var speed = 500
 
+var max_velocity = 800
 
 func start():
 	position = get_viewport_rect().size / 2
@@ -37,6 +38,8 @@ func _physics_process(delta):
 		var thing_we_hit = collision.get_collider()
 		print(thing_we_hit)
 		if !thing_we_hit.is_in_group("players"):
-			velocity *= 1.1 # 10% inc
+			if(abs(velocity.x) < max_velocity && abs(velocity.y) < max_velocity):
+				print(velocity)
+				velocity *= 1.1 # 10% inc
 		else:
 			hit_someone.emit()
