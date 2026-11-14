@@ -13,6 +13,7 @@ func start():
 	# yay gambling
 	
 	var direction_y = randf_range(0.5,1)
+	#var direction_y = 0
 	# yay more gambling
 	
 	velocity = Vector2(direction_x,direction_y).normalized() * speed
